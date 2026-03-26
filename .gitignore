@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+node_modules
+database.sqlite
+*.zip
+dist
+.DS_Store
+=======
 # Logs
 logs
 *.log
@@ -22,3 +29,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+>>>>>>> 581b1f925f2f4bab40b016ae12072a50ebc9f985
