@@ -10,7 +10,7 @@ function CartItem({ cartItem, selectedDeliveryOption, deliveryOptions, loadCart 
     const [isEditing, setIsEditing] = useState(false);
 
     const deleteCartItem = async () => {
-        await axios.delete(`/api/cart-items/${cartItem.productId}`);
+        await axios.delete(`https://ecommerce-project-5oie.onrender.com/api/cart-items/api/cart-items/${cartItem.productId}`);
         await loadCart();
     };
 
