@@ -11,7 +11,8 @@ This is the backend for the [ecommerce-project](https://github.com/SuperSimpleDe
 3. Unzip the code. On Windows, right-click the zip file > `Extract All`. On Mac, double-click the zip file.
 4. Open this code in VSCode.
 5. At the top menu of VSCode, click `Terminal` > `New Terminal`.
-6. In the Terminal, run `npm install`, and run `npm run dev`.
+6. In the Terminal, run:
+   ```bash
+   npm install
+   npm run dev
 
-## Troubleshooting
-If you run into issues, see the [troubleshooting steps](troubleshooting.md).
