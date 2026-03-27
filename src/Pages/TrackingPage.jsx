@@ -26,7 +26,7 @@ export function TrackingPage() {
                 <div className="right-section">
                     <a className="orders-link header-link" href="/Orders">
 
-                        <span className="orders-text">Orders</span>
+                        <span className="orders-text">orders</span>
                     </a>
 
                     <a className="cart-link header-link" href="/checkout">
