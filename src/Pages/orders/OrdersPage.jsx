@@ -5,8 +5,6 @@ import { Header } from "../../Components/Header";
 import { formatMoney } from "../../utils/Money";
 import "./Orders.css";
 
-
-
 export function OrdersPage({ cart }) {
     const [orders, setOrders] = useState([]);
 
@@ -53,7 +51,7 @@ export function OrdersPage({ cart }) {
                                 <div className="order-details-grid">
                                     {order.products.map((orderproduct) => {
                                         return (
-                                            <Fragment key={orderproduct.id} >
+                                            <Fragment key={orderproduct.id}>
                                                 <div className="product-image-container">
                                                     <img src={orderproduct.product.image} />
                                                 </div>
@@ -75,7 +73,7 @@ export function OrdersPage({ cart }) {
                                                 </div>
 
                                                 <div className="product-actions">
-                                                    <a href="/tracking">
+                                                    <a href={`/tracking?name=${encodeURIComponent(orderproduct.product.name)}&image=${encodeURIComponent(orderproduct.product.image)}&delivery=${orderproduct.estimatedDeliveryTimeMs}&quantity=${orderproduct.quantity}`}>
                                                         <button className="track-package-button button-secondary">
                                                             Track package
                                                         </button>
@@ -84,14 +82,11 @@ export function OrdersPage({ cart }) {
 
                                             </Fragment>
                                         );
-
                                     })}
                                 </div>
                             </div>
-
                         );
                     })}
-
                 </div>
             </div>
         </>
