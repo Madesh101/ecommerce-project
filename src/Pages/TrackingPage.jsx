@@ -1,11 +1,12 @@
+import { useSearchParams } from "react-router-dom";
 import "./Tracking.css";
 
 export function TrackingPage() {
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-    const image = params.get("image");
-    const quantity = params.get("quantity");
-    const deliveryDate = new Date(Number(params.get("delivery")))
+    const [searchParams] = useSearchParams();
+    const name = searchParams.get("name");
+    const image = searchParams.get("image");
+    const quantity = searchParams.get("quantity");
+    const deliveryDate = new Date(Number(searchParams.get("delivery")))
         .toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
 
     return (
